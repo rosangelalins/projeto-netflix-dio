@@ -1,0 +1,21 @@
+/*esta regra será aplicada quando a tela chegar ate no max 700px*/
+@media screen and (max-width:700px) {
+    header .container{
+        display: flex;
+        flex-direction: column; /*ele vai jogar os elementos para baixo*/
+    }
+
+    .botao{
+        margin-top:5px;
+        width:300px;
+      /*  height:300px; /*controlar o tamanho dos elementos com a combinação desse tamanho de tela*/ */
+
+    }
+
+}
+   /* quando minha tela no mínimo de largura for 100px*/
+@media screen and (min-width:1000px){
+    .descricao{
+        width: 50%;
+    }
+}

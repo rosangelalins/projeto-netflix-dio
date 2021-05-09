@@ -1,0 +1,122 @@
+/* Declarando variáveis dentro do elemento root
+se você ja sabe quais são as cores principais do seu site,
+para não ficar repetindo o tempo todo as cores, é viável declarar 
+variáveis com as cores e assim utiliza-las com mais facilidade.
+Pois se precisar mudar, só vai ser necessário em um lugar!
+Chama variável assim var(--preta)*/
+
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+/*reseta toda a estrutura do site*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+
+body{
+background:var(--preta);
+font-family: 'Arial', Times, serif;
+color: white;
+}
+
+header .container{
+    display: flex;
+    /* como padrão ele joga as coisas em linha*/
+    flex-direction: row;
+    align-items: center; /*os elementos ficam organizados em vertical(cima pra baixo)*/
+    justify-content: space-between; /*os elementos ficam organizados em horizontal(lado pro outro), 
+                                    ele vai criar um espaço entre a tag antes dele que é o H2 e a NAV*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+/*pegar um evento específico, que é passar o mouse e
+m cima e fazer um efeito nos links*/
+
+    header nav a:hover{
+    color: #fff;
+    }
+
+    /* filme principal*/
+
+.filme-principal{
+    font-size:16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/capa-the-witcher.jpg');
+    height:400px;
+    background-size:cover;
+    display:flex;
+    /*justify-content e align-items eles sempre se invertem, dependendo da direção do flex-direction*/
+    flex-direction:column;/*para ficar um em baixo do outro*/
+    /*o nosso justify-content sempre segue a direção do flex-direction */
+    justify-content:center;
+    align-items: flex-start; /*alinhar elemento de um lado pro outro, da esquerda para direita*/
+
+}
+
+.filme-principal .descricao{
+    margin-top:10px;
+margin-bottom: 90px;
+}
+
+.filme-principal .titulo{
+    /*posicionamento fluido, trabalha com %, sempre bom colocar assim quando se pensa em mobile*/
+    margin-top: 15%;
+font-size:40px;
+font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding:15px 30px;
+    margin-right: 15px;
+    font-size:12px;
+    cursor: pointer;/*quando passar o mouse ele acenda indicando que é um botao*/
+    transition: .3s ease all; /*cuida da transição das animaçoes*/
+}
+
+.botao:hover{
+    /*inverte a cor do conteudo quando passa o mouse em cima*/
+    background-color: white;
+    color:black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height:100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
